@@ -21,8 +21,8 @@ jobs:
         id: run-workflow
         with:
           cloudbees-url:  "https://api.saas-qa.beescloud.com/"
-          workflow-file-name: "cb-workflow.yaml"
-          branch-name: "feature-2"
+          workflow-file-name: "pr.yaml"
+          branch-name: "feature-3"
           cloudbees-pat: ${{ secrets.QA_PAT }}
           
       - name: Checkout Repository - v1
