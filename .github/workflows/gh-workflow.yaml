@@ -1,4 +1,4 @@
-name: Scheduled Workflow Every 5 Minutes
+name: manual
 
 on:
  workflow_dispatch:
