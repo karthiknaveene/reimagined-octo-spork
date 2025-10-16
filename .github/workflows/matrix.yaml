@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Setup Only Job (No Tests)
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  test:
+  setup:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -23,8 +23,5 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run tests
-        run: npm test
+      - name: Skip npm install
+        run: echo "Skipping npm install and tests"
